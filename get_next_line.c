@@ -52,7 +52,7 @@ int		cut_endl(char **save, char **line)
 	if (endl < 0)
 	{
 		if (!(*line = ft_substr(*save, ft_strlen(*save))))
-			(free_return(save, NULL, READ_ERROR));
+			return (free_return(save, NULL, READ_ERROR));
 		return (free_return(save, NULL, READ_EOF));
 	}
 	if (!(*line = ft_substr(*save, endl)))
